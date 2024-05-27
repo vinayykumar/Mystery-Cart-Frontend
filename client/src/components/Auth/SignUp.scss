@@ -1,0 +1,28 @@
+.signup-container{
+    width: 100%;
+    max-height: 800px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    // background-color: red;
+    padding: 10% 0;
+    .main-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+        .heading{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }       
+    }
+}

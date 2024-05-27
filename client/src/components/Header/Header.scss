@@ -1,0 +1,142 @@
+@import "../../css-config/mixins.scss";
+
+.LOGO{
+    font-family: "Honk";
+}
+.main-header{
+    width: 100%;
+    padding: 0 20px;
+    // background-color: #222222;
+    background-color: white;
+    // color: white;
+    color: black;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 99;
+    @include md{
+        padding: 0 40px;
+    }
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        height: 50px;
+        margin: 0 auto;
+        @include md{
+            height: 80px;
+        }
+        .left{
+            list-style-type: none;
+            display: none;
+            gap: 24px;
+            @include md {
+                display: flex;
+            }
+            // li {
+            //     text-decoration: none;
+            //     font-size: 14px;
+            //     font-weight: 800;
+            //     cursor: pointer;
+            // }
+            .links{
+                text-decoration: none;
+                color: black;
+            }
+            .active{
+                color: palevioletred;
+            }
+        }
+        .center{
+            font-size: 28px;
+            font-weight: 900;
+            // color: white;
+            color: #6b16e1;
+            cursor: pointer;
+            @include md{
+                font-size: 36px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include md{
+                gap: 25px;
+            }
+            svg{
+                font-size: 20px;
+                cursor: pointer;
+                @include md{
+                    font-size: 24px;
+                }
+            }
+            .cart-icon{
+                position: relative;
+                span{
+                    color: white;
+                    position: absolute;
+                    min-width: 20px;
+                    text-align: center;
+                    // background-color: #8e2de2;
+                    background-color: #ff4d97;
+                    padding: 2.5px;
+                    border-radius: 10px;
+                    top: -5px;
+                    right: -12px;
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+            .sign-out{
+                font-size: 16px;
+                background-color: #ffffff;
+                color: red;
+                padding: 10px 16px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .auth{
+                display: flex;
+                gap: 4px;
+                .login-btn{
+                    font-size: 16px;
+                    color: black;
+                    background-color: white;
+                    padding: 12px 22px;
+                    border: none;
+                    cursor: pointer;
+                }
+                .signup-btn{
+                    font-size: 14px;
+                    // color: white;
+                    color: black;
+                    padding: 10px 16px;
+                    border: 2px solid black;
+                    border-radius: 4px;
+                    background-color: #ffffff;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+    &.sticky-header{
+        position: sticky;
+        top: 0;
+        transform: translateY(-80px);
+        animation: stickyHeader 0.5s ease forwards;
+    }
+}
+
+@keyframes stickyHeader{
+    0%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
